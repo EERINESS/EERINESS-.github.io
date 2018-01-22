@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 * @create 2018年1月22日
 */
 @Controller
-@RequestMapping("/hello")
 public class HelloController {
 	
-	@RequestMapping("/lala")
+	@RequestMapping(value= {"/","/index"})
 	public String index() {
+		System.out.println("jiji");
 		return "index";
 	}
 
