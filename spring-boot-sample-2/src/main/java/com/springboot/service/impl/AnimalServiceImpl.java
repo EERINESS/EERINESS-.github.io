@@ -2,10 +2,10 @@ package com.springboot.service.impl;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springboot.entity.Animal;
 import com.springboot.repository.AnimalCrudRepository;
@@ -45,7 +45,7 @@ public class AnimalServiceImpl implements AnimalService {
 	public void saveAnimal(Animal animal) {
 		animalCrudRepository.save(animal);
 	}
-
+	
 	/*@Override
 	public void updateAnimal(Animal animal) {
 		animalCrudRepository.updateAnimal(animal);
